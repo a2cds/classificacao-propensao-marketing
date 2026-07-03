@@ -1,0 +1,13 @@
+# ==============================================================================
+# dependencias do projeto: classificacao-propensao-marketing (SmartRetail)
+# ==============================================================================
+
+# Manipulação de dados e leitura de arquivos
+pandas>=2.0.0
+
+# Ferramentas de Machine Learning (treinamento e métricas de classificação)
+scikit-learn>=1.3.0
+
+# Geração de gráficos, plots de matriz de confusão e visualização da árvore
+matplotlib>=3.8.0
+seaborn>=0.13.0

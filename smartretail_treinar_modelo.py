@@ -72,7 +72,7 @@ def exportar_grafico_arvore_propensao(
 ) -> None:
     """Gera e exporta as regras visuais da Árvore de Decisão de Propensão à Campanha."""
     logging.info("Renderizando o fluxograma lógico de decisões do modelo de propensão...")
-    plt.figure(figsize=(12, 8))
+    plt.figure(figsize=(6, 4))
     plot_tree(
         modelo_dt,
         feature_names=feature_names,
@@ -81,7 +81,7 @@ def exportar_grafico_arvore_propensao(
         rounded=True,
         fontsize=9
     )
-    plt.title("Visualização das Decisões de Classificação - SmartRetail (Propensão a Campanha)", fontsize=12, pad=15)
+    plt.title("Árvore de Decisão: Classificação de Clientes para Campanhas de Marketing (SmartRetail)", fontsize=12, pad=15)
     plt.tight_layout()
     plt.savefig(caminho_saida, dpi=150)
     plt.close()
@@ -120,7 +120,8 @@ def main() -> None:
         print(f"Acurácia do Classificador de Marketing: {acuracia * 100:.2f}%")
         print("="*60)
 
-        print("\nMatriz de Confusão:")
+        print("\nMatriz de Confusão: Avaliação de Propensão à Campanha (SmartRetail)")
+        print("-" * 65)
         print(confusion_matrix(y_test, y_pred_dt))
 
         print("\nRelatório de Classificação Detalhado (Precisão e Cobertura):")
